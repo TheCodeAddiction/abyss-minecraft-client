@@ -1,0 +1,17 @@
+package net.ca.abyss.mixin;
+
+import net.ca.abyss.EvilMod;
+import net.minecraft.network.ClientConnection;
+import net.minecraft.network.Packet;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+@Mixin(ClientConnection.class)
+public class ClientConnectionMixin {
+    @Inject(at = @At("TAIL"), method = "send(Lnet/minecraft/network/Packet;)V", cancellable = true)
+    public void send(Packet<?> packet, CallbackInfo ci) {
+        EvilMod.LOGGER.info(packet.getClass().getName());
+    }
+}
+
