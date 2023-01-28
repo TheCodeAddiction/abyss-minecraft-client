@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.ca.abyss.EvilMod"
+
+    ], "client": [
+      "net.ca.abyss.AbyssClient"
     ]
   },
   "mixins": [
