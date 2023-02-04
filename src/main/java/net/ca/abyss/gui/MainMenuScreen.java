@@ -31,7 +31,7 @@ public class MainMenuScreen extends Screen {
         this.addDrawableChild(new ButtonWidget.Builder(
                 Text.literal(AbyssUi.tpButton),
                 (button -> up()))
-                .position(150,0)
+                .position(175,0)
                 .build());
 
 

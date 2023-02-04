@@ -1,7 +1,10 @@
 package net.ca.abyss.util;
 
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.network.Packet;
+
+import java.util.concurrent.TimeUnit;
 
 public class NetworkUtil {
     /**
@@ -13,4 +16,5 @@ public class NetworkUtil {
             MinecraftClient.getInstance().getNetworkHandler().sendPacket(packet);
         }
     }
+
 }
