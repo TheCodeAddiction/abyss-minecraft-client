@@ -12,11 +12,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class ClientConnectionMixin {
     @Inject(at = @At("TAIL"), method = "send(Lnet/minecraft/network/Packet;)V", cancellable = true)
     public void send(Packet<?> packet, CallbackInfo ci) {
-        System.out.println(packet.getClass().getName());
+        //System.out.println(packet.getClass().getName());
         if(packet.getClass() == PlayerMoveC2SPacket.PositionAndOnGround.class){
-            EvilMod.LOGGER.info(String.valueOf(((PlayerMoveC2SPacket.PositionAndOnGround) packet).changesPosition()));
+            //EvilMod.LOGGER.info(String.valueOf(((PlayerMoveC2SPacket.PositionAndOnGround) packet).changesPosition()));
         }
-        //EvilMod.LOGGER.info(packet.getClass().getName());
     }
 }
 
