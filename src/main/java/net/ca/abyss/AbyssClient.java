@@ -26,20 +26,14 @@ public class AbyssClient implements ClientModInitializer {
             GLFW.GLFW_KEY_U,
             CATEGORY
     ));
-    private static final KeyBinding keyBindingSpace = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-            EvilMod.MODID+".space",
-            InputUtil.Type.KEYSYM,
-            GLFW.GLFW_KEY_Z,
-            CATEGORY
-    ));
 
     @Override
     public void onInitializeClient() {
         //Teleport hotkey
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (keyBindingU.wasPressed()) {
-                Teleport fly = new Teleport();
-                fly.sendTpPacket(10);
+                Teleport teleport = new Teleport();
+                teleport.sendTpPacket(10);
 
             }
         });
