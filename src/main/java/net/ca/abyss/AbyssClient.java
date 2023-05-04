@@ -40,7 +40,9 @@ public class AbyssClient implements ClientModInitializer {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             Fly fly = new Fly();
             fly.vehicleFly(client);
-            fly.fly(client);
+            //fly.flyStartAndStop(client);
+            //fly.fly(client);
+            fly.flyHack(client);
         });
 
 

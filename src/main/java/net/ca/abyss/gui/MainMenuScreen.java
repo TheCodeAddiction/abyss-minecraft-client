@@ -1,5 +1,6 @@
 package net.ca.abyss.gui;
 
+import net.ca.abyss.Exploits.ExploitVars;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.option.GameOptions;
@@ -22,6 +23,7 @@ public class MainMenuScreen extends Screen {
     @Override
     //Creats the base layout of the Abyss client
     protected void init(){
+        ExploitVars exploitVars = new ExploitVars();
         //back button
         this.addDrawableChild(new ButtonWidget.Builder(
                 Text.literal(AbyssUi.backButton),
@@ -32,6 +34,20 @@ public class MainMenuScreen extends Screen {
                 Text.literal(AbyssUi.tpButton),
                 (button -> up()))
                 .position(175,0)
+                .build());
+
+        //Enable flight button
+        this.addDrawableChild(new ButtonWidget.Builder(
+                Text.literal(AbyssUi.flyOnButton),
+                (button -> exploitVars.enableFlight()))
+                .position(350,0)
+                .build());
+
+        //Disable flight button
+        this.addDrawableChild(new ButtonWidget.Builder(
+                Text.literal(AbyssUi.flyOnButton),
+                (button -> exploitVars.disableFlight()))
+                .position(350,175)
                 .build());
 
 
