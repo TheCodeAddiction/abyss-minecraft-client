@@ -7,4 +7,7 @@ public class AbyssUi {
     public static String xrayOnButton = "XRAY on";
     public static String xrayOffButton = "XRAY off";
     public static String backButton = "Back";
+
+    public static String fishingOnButton = "Auto fish on";
+    public static String fishingOffButton = "Auto fish off";
 }

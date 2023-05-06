@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class BlockEntityMixin {
     @Inject(at=@At("HEAD"), method = "getPos()Lnet/minecraft/util/math/BlockPos;")
     public void getPos(CallbackInfoReturnable<BlockPos> cir){
-        EvilMod.LOGGER.info(cir.getReturnValue().toString());
+        //EvilMod.LOGGER.info(cir.getReturnValue().toString());
     }
 
 }

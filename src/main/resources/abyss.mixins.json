@@ -9,7 +9,8 @@
     "ClientConnectionMixin",
     "EntityMixin",
     "GameMenuScreenMixin",
-    "BlockEntityMixin"
+    "BlockEntityMixin",
+    "FishingBobberEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

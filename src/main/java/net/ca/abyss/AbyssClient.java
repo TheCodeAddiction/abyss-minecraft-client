@@ -1,5 +1,6 @@
 package net.ca.abyss;
 
+import net.ca.abyss.Exploits.AutoFish;
 import net.ca.abyss.Exploits.Fly;
 import net.ca.abyss.Exploits.Teleport;
 import net.fabricmc.api.ClientModInitializer;
@@ -39,9 +40,11 @@ public class AbyssClient implements ClientModInitializer {
         });
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             Fly fly = new Fly();
+            AutoFish autoFish = new AutoFish();
             fly.vehicleFly(client);
             //fly.flyStartAndStop(client);
             //fly.fly(client);
+            autoFish.autoFish(client);
             fly.flyHack(client);
         });
 

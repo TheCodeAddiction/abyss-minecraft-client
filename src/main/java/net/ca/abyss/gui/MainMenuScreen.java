@@ -33,23 +33,34 @@ public class MainMenuScreen extends Screen {
         this.addDrawableChild(new ButtonWidget.Builder(
                 Text.literal(AbyssUi.tpButton),
                 (button -> up()))
-                .position(175,0)
+                .dimensions(175,0,100,20)
                 .build());
 
         //Enable flight button
         this.addDrawableChild(new ButtonWidget.Builder(
                 Text.literal(AbyssUi.flyOnButton),
                 (button -> exploitVars.enableFlight()))
-                .position(350,0)
+                .dimensions(300,0,100,20)
                 .build());
 
         //Disable flight button
         this.addDrawableChild(new ButtonWidget.Builder(
-                Text.literal(AbyssUi.flyOnButton),
+                Text.literal(AbyssUi.flyOffButton),
                 (button -> exploitVars.disableFlight()))
-                .position(350,175)
+                .dimensions(300,50,100,20)
                 .build());
 
+        this.addDrawableChild(new ButtonWidget.Builder(
+                Text.literal(AbyssUi.fishingOnButton),
+                (button -> exploitVars.enableAutoFishing()))
+                .dimensions(425,0,100,20)
+                .build());
+
+        this.addDrawableChild(new ButtonWidget.Builder(
+                Text.literal(AbyssUi.fishingOffButton),
+                (button -> exploitVars.disableAutoFishing()))
+                .dimensions(425,50,100,20)
+                .build());
 
     }
 
